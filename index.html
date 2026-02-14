@@ -248,7 +248,7 @@ In dual-arm dexterous teleoperation, crossplatform generalization of motion reta
     <div class="container">
 
       <div class="column is-centered has-text-centered">
-        <img src="static/figures/overview.png" alt="Motivation of our model"/>
+        <img src="static/figures/ICRA_Figure.png" alt="Motivation of our model"/>
       </div>    
   </div>
 </div>
@@ -263,10 +263,10 @@ In dual-arm dexterous teleoperation, crossplatform generalization of motion reta
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-         <h2 class="title is-3">How does it work?</h2> 
+         <h2 class="title is-3"> Overview of the dual-arm dexterous teleoperation system. </h2> 
         <div class="content has-text-justified">
           <p>
-First, we train <a href="https://evm7.github.io/UnsH2R/">ImitationNet</a> to retarget human motions into different robots. ImitationNet provides stylistic robot poses that resemble the original human but are not feasible for executing in the physical world. Then, we train our whole-body controller using constrained reinforcement learning to refine those reference poses based on current observation from the physics simulator IsaacGym. .
+Human motions are first captured via FrankMocap and processed into 3D body and hand poses. The extracted hand and arm motions are retargeted to the corresponding movements of the robot’s hand and arm. The robot’s arm angles are directly mapped to the robot, while the hand angles are adjusted by the adaptive grasping module before executing the physical grasping.
           </p>
         <div class="columns is-centered has-text-centered">
             <div class="item">
